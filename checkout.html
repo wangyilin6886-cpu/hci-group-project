@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="path/to/your-script.js"></script>
+    <title>Checkout Page</title>
+</head>
+<body>
+
+<header>
+    <a><b>Back</b></a>
+    <h1>Checkout</h1>
+    <div></div>
+</header>
+
+<section class="order-summary">
+    <h3>What you've ordered:</h3>
+
+    <div class="order-list">
+        <div class="order-item">
+            <div class="item-left">
+                <span class="item-name">Burger</span>
+                <span class="item-qty">3 quantities</span>
+            </div>
+            <span class="item-price">$25.00</span>
+        </div>
+
+        <div class="order-item">
+            <div class="item-left">
+                <span class="item-name">Fries</span>
+                <span class="item-qty">2 quantities</span>
+            </div>
+            <span class="item-price">$15.00</span>
+        </div>
+
+        <div class="order-item">
+            <div class="item-left">
+                <span class="item-name">Coke</span>
+                <span class="item-qty">2 quantities</span>
+            </div>
+            <span class="item-price">$6.00</span>
+        </div>
+    </div>
+</section>
+
+<hr>
+
+<section class="payment-method">
+    <h3>Payment Method</h3>
+
+    <div class="payment-options">
+    <label class="credit payment-option">
+        <input type="radio" name="payment" value="credit" hidden>
+        <a href="./index.html">Credit Card</a>
+    </label>
+
+    <label class="cash payment-option">
+        <input type="radio" name="payment" value="cash" hidden>
+        <a href="./index.html">Cash</a>
+    </label>
+
+    <label class="qris payment-option">
+        <input type="radio" name="payment" value="qris" hidden>
+        <a href="./index.html">QRIS</a>
+    </label>
+</div>
+
+</section>
+
+<hr>
+
+<section class="delivery-details">
+    <h3>Delivery Details</h3>
+
+    <form id="checkout-form">
+
+        <div class="input-box">
+            <span>Name</span>
+            <input id="nameInput" type="text">
+        </div>
+
+        <div class="input-box">
+            <span>Address</span>
+            <input id="addressInput" type="text">
+        </div>
+
+        <div class="input-box">
+            <span>Phone Number</span>
+            <input id="phoneInput" type="text">
+        </div>
+
+        <p id="errorMessage"></p>
+    </form>
+</section>
+
+        <div class="place-order-wrapper">
+            <button class="place-order" id="placeOrderBtn">Place Order</button>
+        </div>
+    </body>
+</html>

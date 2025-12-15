@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>final-code</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        .head-line ul {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-right: 70px;
+            
+        }
+        .head-line ul li {
+            margin-left: 40px;
+            font-size: 20px;
+            list-style: none;
+            z-index: 1000;
+            margin-top: 30px;
+        }
+        .head-line ul li a{
+            text-decoration: none;
+            color: aliceblue;
+            font-weight: 700;
+            transition: 0.3s 0s linear all;
+            display: inline-block;
+        }
+        .head-line ul li a:hover{
+            transform: translateY(-4px) scale(1.13);
+            color: rgb(234, 184, 123);
+
+        }
+
+        body{
+            position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+    overflow-x: hidden;
+
+        }
+        body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./restuarant.png');
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;  
+    z-index: -1; 
+}
+        
+        .order{
+    background-color: #F9A826;
+    padding:25px 47px;
+    position: fixed;
+    margin-top: 500px; 
+    display: inline-block; 
+    margin-left: 1300px;
+    cursor: pointer; 
+    font-weight: 600;
+    font-size: 28px;
+    color: white;
+    font-family: "Arial", sans-serif;
+    border-radius: 40px;
+    transition: 0.3s 0s linear all;
+}
+    .order:hover{
+        transform: translateY(-7px) scale(1.07);
+        text-shadow: 0 0 7px rgb(79, 76, 76);
+    }
+    .icon{
+        position: relative;
+        z-index: 3000;
+        color: white;
+        font-size: 30px;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-right: 70px;
+        margin-top: 40px;
+        cursor: pointer;
+    }
+    .icon span{
+        transition: transform 0.3s linear;
+    }
+    .icon span:hover{
+        transform: scale(1.1);
+        color: rgb(234, 184, 123);
+
+    }
+    #menu-toggle {
+    display: none;
+}
+    .menu-list{
+        display: flex;
+        flex-direction: row-reverse;
+        position: absolute;
+        top: 142px;
+        right: 12px;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 1000;
+        transition: opacity 0.4s ease
+    }
+    .menu-list ul{
+        background-color: rgb(234, 184, 123);
+        padding-left: 11px;
+        padding-right: 17px;
+        padding-top: 5px;
+        font-weight: 500;
+        border-radius: 11px;
+        margin-right: 60px;
+        margin-top: 3px;
+    }
+    .menu-list ul li{
+        list-style: none;
+        margin-bottom: 15px;
+    }
+    .menu-list ul li a {
+        text-decoration: none;
+        color: black;
+        display: inline-block;
+        transition: 0.2s 0s linear all;
+    }
+    .menu-list ul li a:hover{
+        color: aliceblue;
+        transform: scale(1.1);
+    }
+    #menu-toggle:checked ~ .menu-list {
+    opacity: 1;
+    visibility: visible;
+}
+.content-wrapper {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+}
+.footer {
+    background: rgba(0, 0, 0, 0.9);
+    color: #e0e0e0;
+    padding: 50px 0 20px;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+}
+
+.footer-section {
+    padding: 0 15px;
+}
+
+.footer-title {
+    color: #F9A826;
+    font-size: 22px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: #F9A826;
+}
+
+.footer-description {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 15px;
+    color: #aaa;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    color: #e0e0e0;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    background: #F9A826;
+    color: #000;
+    transform: translateY(-5px);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links a:hover {
+    color: #F9A826;
+    transform: translateX(5px);
+}
+
+.opening-hours {
+    list-style: none;
+}
+
+.opening-hours li {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #aaa;
+}
+
+.opening-hours span {
+    color: #F9A826;
+    font-weight: 500;
+    float: right;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    font-size: 15px;
+    color: #aaa;
+    display: flex;
+    align-items: flex-start;
+}
+
+.contact-info i {
+    color: #F9A826;
+    margin-right: 10px;
+    margin-top: 3px;
+    width: 20px;
+}
+
+.footer-bottom {
+    background: rgba(0, 0, 0, 0.95);
+    padding: 20px 0;
+    margin-top: 40px;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    color: #aaa;
+    font-size: 14px;
+    margin: 0;
+}
+
+.footer-bottom i {
+    color: #ff4757;
+    margin: 0 5px;
+}
+
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 40px 0 20px;
+        margin-top: 50px;
+    }
+    
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .footer-section {
+        padding: 0 10px;
+    }
+    
+    .footer-title {
+        font-size: 20px;
+    }
+    
+    .opening-hours span {
+        float: none;
+        display: block;
+        margin-top: 5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .contact-info li {
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+@media (max-width: 1400px) {
+    .order {
+        margin-left: 1000px;
+        padding: 20px 35px;
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .order {
+        margin-left: 800px;
+    }
+    .head-line ul {
+        margin-right: 40px;
+    }
+    .head-line ul li {
+        margin-left: 30px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 992px) {
+    .order {
+        margin-left: 600px;
+        margin-top: 450px;
+        padding: 18px 30px;
+        font-size: 22px;
+    }
+    .head-line ul li {
+        margin-left: 20px;
+        font-size: 16px;
+    }
+    .icon {
+        margin-right: 40px;
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 768px) {
+    .head-line {
+        display: none; /* 隐藏顶部导航 */
+    }
+    .order {
+        margin-left: auto;
+        margin-right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 400px;
+        padding: 15px 25px;
+        font-size: 20px;
+    }
+    .icon {
+        margin-right: 30px;
+        margin-top: 30px;
+    }
+    .menu-list {
+        top: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .order {
+        margin-top: 350px;
+        padding: 12px 20px;
+        font-size: 18px;
+        border-radius: 30px;
+    }
+    .menu-list ul {
+        margin-right: 30px;
+        padding: 5px 10px;
+    }
+    .menu-list ul li {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .icon {
+        font-size: 24px;
+        margin-right: 20px;
+    }
+    .order {
+        margin-top: 300px;
+        font-size: 16px;
+    }
+}
+        
+
+    </style>
+</head>
+<body>
+    <div class="content-wrapper">
+    <div class="head-line">
+        <ul>
+            <li><a href="./checkout.html">CHECK OUT</a></li>
+            <li><a href="#">SIGN UP</a></li>
+            <li><a href="#">CONTACTS</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="./profile.html" target="_blank">PROFILE</a></li>
+            <li><a href="#">HOME</a></li>
+        </ul>
+    </div>
+    <input type="checkbox" id="menu-toggle" hidden>
+    <label for="menu-toggle" class="icon">
+        <span><i class="fas fa-list"></i></span>
+</label>
+
+<div class="menu-list">
+    <ul>
+        <li><a href="#">MENU</a></li>
+        <li><a href="#">PROMOTION</a></li>
+        <li><a href="#">DELIBERY</a></li>
+        <li><a href="#">CART</a></li>
+    </ul>
+</div>
+    <div class="order">Order Now</div>  
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section about">
+            <h3 class="footer-title">Gourmet Restaurant</h3>
+            <p class="footer-description">Experience fine dining with our exquisite dishes crafted by world-class chefs. Fresh ingredients, authentic flavors, and exceptional service.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-section links">
+            <h3 class="footer-title">Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="./profile.html" target="_blank">Profile</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section hours">
+            <h3 class="footer-title">Opening Hours</h3>
+            <ul class="opening-hours">
+                <li>Monday - Friday: <span>10:00 AM - 11:00 PM</span></li>
+                <li>Saturday: <span>9:00 AM - 12:00 AM</span></li>
+                <li>Sunday: <span>10:00 AM - 10:00 PM</span></li>
+            </ul>
+        </div>
+        
+        <div class="footer-section contact">
+            <h3 class="footer-title">Contact Us</h3>
+            <ul class="contact-info">
+                <li><i class="fas fa-map-marker-alt"></i> 123 Gourmet Street, Food City</li>
+                <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                <li><i class="fas fa-envelope"></i> info@gourmetrestaurant.com</li>
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer-bottom">
+        <p>&copy; 2024 Gourmet Restaurant. All Rights Reserved. | Designed with <i class="fas fa-heart"></i> for food lovers</p>
+    </div>
+</footer> 
+</body>
+</html>

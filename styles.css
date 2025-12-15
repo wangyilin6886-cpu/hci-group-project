@@ -1,0 +1,159 @@
+/* HEADER */
+header { 
+    background-color: #f7ab30;
+    font-family: 'georgia', serif;
+    color: white;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+}
+
+h1 {
+    text-align: center;
+    flex: 1;
+    font-size: x-large;
+}
+
+a {
+    font-size: medium;
+    background: none;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* BODY */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'georgia', serif;    
+    background-color: rgba(0, 0, 0, 0.9);   
+}
+
+/* ORDER LIST */
+.order-list {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 10px;
+}
+
+.order-item {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    background: #F9A826;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.order-item:hover {
+    box-shadow: 0 4px 10px #ab751e;
+    transition: 0.3s;
+}
+
+.item-left {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.item-qty {
+    font-size: small;
+    color: #805613;
+    font-style: italic;
+}
+
+/* SECTION TITLES */
+h3 {
+    padding-left: 20px;
+    color: #eaecf3;
+}
+
+hr {
+    margin: 30px 0;
+    border-color: #eaecf3;
+}
+
+/* PAYMENT CHECKLIST */
+.payment-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.payment-option {
+    width: 30%;
+    padding: 15px;
+    border-radius: 10px;
+    background: #F9A826;
+    border: 2px solid #bf8322;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+}
+
+.payment-option:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.payment-option input {
+    display: none;
+}
+
+/* Highlight when selected */
+.payment-option.selected {
+    border: 3px solid white;
+}
+
+/* INPUT BOXES */
+.input-box {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 90%;
+    max-width: 450px;
+    background: #f7ab30;
+    border-radius: 10px;
+    padding: 12px;
+    border: 1.5px solid #bf8322;
+    margin-left: 20px;
+}
+
+.input-box input {
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    width: 100%;
+}
+
+/* PLACE ORDER */
+.place-order {
+    padding: 15px 25px;
+    border-radius: 10px;
+    background: #F9A826;
+    border: 2px solid #bf8322;
+    cursor: pointer;
+}
+
+.place-order:hover {
+    box-shadow: 0 4px 10px #956312;
+}
+
+.place-order-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+#errorMessage {
+    color: red;
+    margin-left: 20px;
+}

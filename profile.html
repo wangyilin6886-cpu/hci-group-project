@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="./profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="box">
+        <input type="radio" id="nmblogin" name="form-tab" checked>
+        <input type="radio" id="nmbregister" name="form-tab">
+        
+        <div class="head-box">
+            <label for="nmblogin" class="tab-login">
+                <i class="fas fa-sign-in-alt"></i> LOGIN
+            </label>
+            <label for="nmbregister" class="tab-register">
+                <i class="fas fa-user-plus"></i> REGISTER
+            </label>
+        </div>
+        <form class="form login-form" action="#" method="post">
+            <h2 class="form-title">Login Account</h2>
+            <p class="form-subtitle">Please log in using your account information</p>
+            
+            <div class="input-group">
+                <label for="login-email">Email Address</label>
+                <input type="email" id="login-email" name="email" placeholder="Please enter your email address" required>
+                <i class="fas fa-envelope"></i>
+                <div class="validation-hint">Please enter a valid email address</div>
+            </div>
+            
+            <div class="input-group">
+                <label for="login-password">Password</label>
+                <input type="password" id="login-password" name="password" placeholder="Please enter your password" required minlength="6">
+                <i class="fas fa-lock"></i>
+                <div class="validation-hint">Password must be at least 6 characters</div>
+            </div>
+            
+            <div class="remember-forgot">
+                <label class="custom-checkbox">
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                    Remember Me
+                </label>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+            
+            <button type="submit" class="submit-btn">Login</button>
+            
+            <div class="divider"><span>Or login with</span></div>
+            
+            <div class="social-login">
+                <div class="social-btn google">
+                    <i class="fab fa-google"></i>
+                    <span>Google</span>
+                </div>
+                <div class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </div>
+                <div class="social-btn twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </div>
+            </div>
+            
+            <p class="form-footer">
+                Don't have an account? <label for="nmbregister" class="switch-form">Register Now</label>
+            </p>
+        </form>
+        <form class="form register-form" action="#" method="post">
+            <h2 class="form-title">Create Account</h2>
+            <p class="form-subtitle">Fill in the information below to create a new account</p>
+            
+            <div class="input-group">
+                <label for="register-name">Full Name</label>
+                <input type="text" id="register-name" name="name" placeholder="Please enter your full name" required>
+                <i class="fas fa-user"></i>
+                <div class="validation-hint">Please enter your real name</div>
+            </div>
+            
+            <div class="input-group">
+                <label for="register-email">Email Address</label>
+                <input type="email" id="register-email" name="email" placeholder="Please enter your email address" required>
+                <i class="fas fa-envelope"></i>
+                <div class="validation-hint">Please enter a valid email address</div>
+            </div>
+            
+            <div class="input-group">
+                <label for="register-password">Password</label>
+                <input type="password" id="register-password" name="password" placeholder="Please enter password (at least 6 characters)" required minlength="6">
+                <i class="fas fa-lock"></i>
+                <div class="validation-hint">Password must be at least 6 characters</div>
+            </div>
+            
+            <div class="input-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Please re-enter your password" required minlength="6">
+                <i class="fas fa-lock"></i>
+                <div class="validation-hint">Please make sure passwords match</div>
+            </div>
+            
+            <div class="input-group custom-checkbox-only">
+                <label class="custom-checkbox">
+                    <input type="checkbox" required>
+                    <span class="checkmark"></span>
+                    I agree to the <a href="#" class="terms-link">Terms of Service</a> and <a href="#" class="terms-link">Privacy Policy</a>
+                </label>
+            </div>
+            
+            <button type="submit" class="submit-btn">Create Account</button>
+            
+            <div class="divider"><span>Or register with</span></div>
+            
+            <div class="social-login">
+                <div class="social-btn google">
+                    <i class="fab fa-google"></i>
+                    <span>Google</span>
+                </div>
+                <div class="social-btn facebook">
+                    <i class="fas fa-facebook-f"></i>
+                    <span>Facebook</span>
+                </div>
+                <div class="social-btn twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span>Twitter</span>
+                </div>
+            </div>
+            
+            <p class="form-footer">
+                Already have an account? <label for="nmblogin" class="switch-form">Login Now</label>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
